@@ -6,6 +6,7 @@ import RechartsBarTest from './RechartsBarTest';
 import SubwayApiChart from './SubwayApiChart';
 import SubwayApiChart1 from './SubwayApiChart1';
 import SubwayAreaChart from './SubwayAreaChart';
+import PostCodeApp from './PostCodeApp';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
       {/* <RechartsLineTest/> */}
       {/* <RechartsBarTest/> */}
       {/* <SubwayApiChart.js/> */}
-      <SubwayApiChart1/>
+      {/* <SubwayApiChart1/> */}
       {/* <SubwayAreaChart/> */}
+      <PostCodeApp/>
     </div>
   );
 }
