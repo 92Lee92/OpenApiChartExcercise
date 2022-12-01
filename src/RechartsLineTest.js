@@ -17,7 +17,7 @@ function RechartsLineTest (){
                 <Legend/>
                 <Line type="monotone" dataKey={"유동인구수"} stroke="#8884D8" activeDot={{r:8}}/>
                 <Line type="monotone" dataKey={"비유동인구수"} stroke="#82CA9D"/>
-            </LineChart>
+        </LineChart>
     )
     
 }

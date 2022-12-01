@@ -1,8 +1,9 @@
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from 'recharts'
 import {useState} from 'react';
 import {Button, NavItem, Table} from "reactstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import axios from 'axios';
-function SubwayApi(){
+function SubwayApiChart(){
     const [row, setRow] = useState([]);
     const apiRequest = () =>{
 
@@ -30,7 +31,6 @@ function SubwayApi(){
                         <th>역이름</th>
                         <th>승차인원수</th>
                         <th>하차인원수</th>
-                        <th>차이</th>
                     </tr>
                     {
                         row.map(item=>(    
@@ -40,7 +40,6 @@ function SubwayApi(){
                                 <td>{item.SUB_STA_NM}</td>
                                 <td>{item.RIDE_PASGR_NUM}</td>
                                 <td>{item.ALIGHT_PASGR_NUM}</td>
-                                <td>{item.RIDE_PASGR_NUM-item.ALIGHT_PASGR_NUM}</td>
                             </tr>
                         ))
                     }
@@ -49,6 +48,6 @@ function SubwayApi(){
         </>
     )
 }
-export default SubwayApi;
+export default SubwayApiChart;
 
 //key 사용하는 이유 react dom이 반복적인 트리를 갖고있을때 키를 주지 않으면 데이터가 엉킨다. 
